@@ -1,0 +1,31 @@
+# 钓鱼网站检测系统 - Web版本依赖
+
+# Web框架
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# 数据处理
+numpy>=1.24.0
+pandas>=2.0.0
+
+# 机器学习
+scikit-learn>=1.3.0
+joblib>=1.3.0
+
+# 可视化
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# URL特征提取
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+python-whois>=0.8.0
+tldextract>=3.4.0
+lxml>=4.9.0
+
+# 深度学习（可选 - 如果使用Step6）
+torch>=2.0.0
+
+# 开发工具（可选）
+jupyter>=1.0.0
+ipython>=8.0.0

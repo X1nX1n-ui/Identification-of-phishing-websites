@@ -1,0 +1,117 @@
+/* 加载动画和增强样式 */
+
+/* 加载按钮动画 */
+.detect-btn.loading {
+    background: #D4A574;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #F5F1E8;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 特征值样式 */
+.feature-value.safe {
+    color: #828B78;
+    font-weight: 600;
+}
+
+.feature-value.danger {
+    color: #D4886E;
+    font-weight: 600;
+}
+
+/* 概率显示 */
+.probabilities {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    border: 2px solid #C9BFB0;
+}
+
+.prob-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 16px;
+}
+
+.prob-item .label {
+    font-weight: 500;
+    color: #3A3632;
+}
+
+.prob-item .value {
+    font-weight: 700;
+    font-family: 'Crimson Text', serif;
+    font-size: 18px;
+}
+
+/* 图表容器优化 */
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    border: 2px solid #C9BFB0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.chart-container canvas {
+    max-height: 260px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .chart-container {
+        height: 250px;
+    }
+    
+    .chart-container canvas {
+        max-height: 210px;
+    }
+}
+
+/* 结果卡片动画 */
+.status-card, .details-card {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 特征网格增强 */
+.feature-item {
+    transition: all 0.3s ease;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.feature-item:hover {
+    background: rgba(212, 165, 116, 0.1);
+    transform: translateY(-2px);
+}
